@@ -1,0 +1,161 @@
+:root {
+  --main-color: #bb971f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+}
+
+/* start setting box */
+.setting-box {
+  position: fixed;
+  background-color: aliceblue;
+  z-index: 10;
+  width: 200px;
+  min-height: 100vh;
+  left: -200px;
+  transition: 0.3s;
+}
+.setting-box.open {
+  left: 0px;
+}
+.setting-box .setting-icon {
+  position: absolute;
+  background-color: aliceblue;
+  right: -35px;
+  top: 100px;
+  width: 35px;
+  text-align: center;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+.setting-box .setting-icon i {
+  font-size: 20px;
+}
+.setting-box .setting-container {
+  text-align: center;
+  margin-top: 30px;
+}
+.setting-box .setting-container .setting-color {
+  margin: 20px;
+  padding: 20px 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.setting-box .setting-color .colors {
+  list-style: none;
+  padding-left: 0;
+}
+.setting-box .setting-color .colors li {
+  background-color: rebeccapurple;
+  width: 25px;
+  height: 25px;
+  margin: 3px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+}
+.setting-box .setting-color .colors .active {
+  opacity: 1;
+  border: 1px solid white;
+}
+.setting-box .setting-color .colors li:first-child {
+  background-color: #bb971f;
+}
+.setting-box .setting-color .colors li:nth-child(2) {
+  background-color: #169616;
+}
+.setting-box .setting-color .colors li:nth-child(3) {
+  background-color: #3939be;
+}
+.setting-box .setting-color .colors li:nth-child(4) {
+  background-color: #ad2d2d;
+}
+
+/* end setting box */
+
+/* start landing page  */
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../imgs/4.jpg);
+  background-size: cover;
+  position: relative;
+  transition: 0.5s;
+}
+.landing-page .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 1, 0.548);
+  z-index: 1;
+}
+.landing-page .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+}
+.landing-page .header .logo {
+  width: 300px;
+  padding: 10px;
+  color: --main-color;
+  z-index: 2;
+}
+.landing-page .header .logo h2 {
+  color: var(--main-color);
+}
+
+.landing-page .header .list {
+  list-style: none;
+  padding-right: 30px;
+  z-index: 2;
+}
+.landing-page .header .list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.landing-page .header .list li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+.landing-page .header .list li a:active,
+.landing-page .header .list li a:hover {
+  opacity: 0.8;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 3px;
+}
+.introduction-area {
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+}
+.introduction-area h2 {
+  font-size: 30px;
+}
+.introduction-area p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.introduction-area h2 span {
+  color: var(--main-color);
+}
+/* end landing page  */
